@@ -39,7 +39,5 @@ public class GuruEntity extends BaseEntity<String> implements Serializable {
     @NotEmpty(message = "Alamat Tidak Boleh Kosong")
     @Column(name = "alamat", length = 300)
     private String alamat;
-//
-//    @OneToOne(mappedBy = "guru")
-//    private KelasEntity kelas;
+
 }

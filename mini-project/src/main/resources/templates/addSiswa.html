@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mini Project | Muhammad Yusuf Alpian</title>
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid container">
+        <a class="navbar-brand" href="#">Sikeda</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Data Siswa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Data Guru</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Data Kelas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Data Kehadiran</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <h3>Tambah Data Siswa</h3>
+    <div>
+        <form th:object="${siswa}" method="post" th:action="@{save}">
+            <div class="mb-3">
+                <label class="form-label">NIS</label>
+                <input type="text" class="form-control" th:field="*{nis}" id="nis">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Nama</label>
+                <input type="text" class="form-control" th:field="*{nama}" id="nama">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Tempat Lahir</label>
+                <input type="text" class="form-control" th:field="*{tempat}" id="tempat">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Tanggal Lahir</label>
+                <input type="date" class="form-control" th:field="*{tgl}" id="tgl">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">No. Telp</label>
+                <input type="text" class="form-control" th:field="*{telp}" id="telp">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Alamat</label>
+                <input type="text" class="form-control" th:field="*{alamat}" id="alamat">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+
+<script src="/webjars/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript" crossorigin="anonymous"></script>
+</body>
+</html>
